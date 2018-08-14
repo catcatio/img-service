@@ -1,0 +1,4 @@
+# exclude everything except directory scr/
+/*
+!/src/*
+!/index.js
