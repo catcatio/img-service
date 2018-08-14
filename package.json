@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "dev": "nodemon .",
-    "init": "npm i && npm run dev"
+    "server": "forever -w index.js",
+    "init": "npm i && npm run server"
   },
   "keywords": [],
   "author": "",

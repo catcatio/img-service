@@ -15,4 +15,5 @@ services:
       - "${PORT:-3000}:${PORT:-3000}"
     volumes:
       - .:/usr/app
+    restart: always
     command: npm run init

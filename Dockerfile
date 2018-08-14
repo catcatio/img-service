@@ -10,12 +10,15 @@ RUN apk --update add \
     nodejs \
     nodejs-npm \
     # service dependencies
+    jpeg \
+    libjpeg \
+    libpng \
     imagemagick \
     # clean up cache
     && rm -rf /var/cache/apk/*
 
 RUN mkdir -p /usr/app \
-    && npm install -g nodemon
+    && npm install -g nodemon forever
 
 WORKDIR /usr/app
 VOLUME ["/usr/app"]

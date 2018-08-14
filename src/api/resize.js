@@ -27,10 +27,11 @@ const resizeApi = () => {
     }
 
     console.log(reqId, '  resizing', url, size, quality)
-    const resize = im().resize(`${size}x${size}`).quality(quality)
+    const resize = im().resize(`${size}X${size}`).quality(quality)
     request.get(url)
       .on('response', (response) => {
-        res.header('Content-Type', response.headers['content-type']);
+        console.log(content - type, response.headers['content-type'])
+        res.header('Content-Type', response.headers['content-type'])
       })
       .pipe(resize)
       .pipe(res)
