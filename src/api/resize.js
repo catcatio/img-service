@@ -5,9 +5,7 @@ const MemoryStream = require('memory-stream')
 const LRU = require("lru-cache")
   , options = {
     max: 500,
-    length: (n, key) => { return n * 2 + key.length },
-    dispose: (key, n) => { n.close() },
-    maxAge: 1000 * 60 * 60 * 48 // 48 hours
+    maxAge: 1000 * 60 * 60 * 24 * 7 // 7 days
   }
   , cache = LRU(options)
 
