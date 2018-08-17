@@ -9,11 +9,13 @@ services:
     env_file: .env
     environment:
       - PORT=${PORT:-3000}
+      - PM2_PORT=${PM2_PORT:-8095}
     image: catcatio/imgservice
     working_dir: /usr/app
     ports:
       - "${PORT:-3000}:${PORT:-3000}"
+      - "${PM2_PORT:-8095}:${PM2_PORT:-8095}"
     volumes:
       - .:/usr/app
     restart: always
-    command: npm run init
+    command: sh scripts/startup.sh
