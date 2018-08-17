@@ -1,5 +1,4 @@
-
-
+require('./utils/md5')
 
 module.exports = (config) => {
   const start = async () => {
