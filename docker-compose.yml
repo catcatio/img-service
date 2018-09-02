@@ -18,4 +18,9 @@ services:
     volumes:
       - .:/usr/app
     restart: always
+    logging:
+      driver: gelf
+      options:
+        gelf-address: udp://localhost:${LS_PORT:-12201}
+        tag: "img-service"
     command: sh scripts/startup.sh
