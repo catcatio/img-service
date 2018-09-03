@@ -3,7 +3,8 @@
     "script": "src/index.js",
     "instances": "1",
     "ignore_watch": [
-      "node_modules"
+      "node_modules",
+      ".git"
     ],
     "watch": true,
     "env": {
