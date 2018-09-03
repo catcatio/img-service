@@ -1,7 +1,11 @@
 [{
     "name": "img-service",
-    "script": "nodemon_bootstrap.js",
+    "script": "src/index.js",
     "instances": "1",
+    "ignore_watch": [
+      "node_modules"
+    ],
+    "watch": true,
     "env": {
       "NODE_ENV": "production"
     }
